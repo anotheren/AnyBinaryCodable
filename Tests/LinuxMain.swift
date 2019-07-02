@@ -3,5 +3,6 @@ import XCTest
 import AnyByteTests
 
 var tests = [XCTestCaseEntry]()
-tests += AnyByteTests.allTests()
+tests += ByteCodableTests.allTests()
+tests += UIn24Tests.allTests()
 XCTMain(tests)
