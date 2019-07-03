@@ -8,7 +8,7 @@
 
 import Foundation
 
-@_fixed_layout
+@frozen
 public struct UInt24 {
     
     private var b0: UInt8
@@ -217,7 +217,7 @@ extension UInt24: FixedWidthInteger {
         return UInt24(b0: b2, b1: b1, b2: b0)
     }
     
-    @_fixed_layout
+    @frozen
     public struct Words: RandomAccessCollection {
         
         public typealias Indices = Range<Int>
