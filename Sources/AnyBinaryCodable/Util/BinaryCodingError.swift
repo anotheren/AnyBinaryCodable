@@ -1,5 +1,5 @@
 //
-//  ByteCodingError.swift
+//  BinaryCodingError.swift
 //  AnyBinaryCodable
 //
 //  Created by 刘栋 on 2019/5/8.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-public enum ByteCodingError: Error {
+public enum BinaryCodingError: Error {
     
     case eof
 }
 
-extension ByteCodingError: CustomStringConvertible {
+extension BinaryCodingError: CustomStringConvertible {
     
     public var description: String {
         switch self {

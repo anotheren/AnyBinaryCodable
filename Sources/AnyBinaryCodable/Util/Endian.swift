@@ -20,9 +20,9 @@ extension Endian: CustomStringConvertible {
         
         switch self {
         case .big:
-            return "BIG-ENDIAN"
+            return "BIG Endian"
         case .little:
-            return "LITTLE-ENDIAN"
+            return "LITTLE Endian"
         }
     }
 }

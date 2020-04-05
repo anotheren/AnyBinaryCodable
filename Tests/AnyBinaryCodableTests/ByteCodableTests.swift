@@ -25,7 +25,7 @@ class ByteCodableTests: XCTestCase {
             self.p7 = p7
         }
         
-        init(from decoder: ByteDecoder) throws {
+        init(from decoder: BinaryDecoder) throws {
             var container = decoder.container()
             p0 = try container.decode(Case2.self)
             p1 = try container.decode(using: .big)
@@ -37,7 +37,7 @@ class ByteCodableTests: XCTestCase {
             p7 = try container.decode(Case2.self)
         }
         
-        func encode(to encoder: ByteEncoder) {
+        func encode(to encoder: BinaryEncoder) {
             var container = encoder.container()
             container.encode(p0)
             container.encode(p1, using: .big)
@@ -64,7 +64,7 @@ class ByteCodableTests: XCTestCase {
             self.p3 = p3
         }
         
-        init(from decoder: ByteDecoder) throws {
+        init(from decoder: BinaryDecoder) throws {
             var container = decoder.container()
             p0 = try container.decode(using: .little)
             p1 = try container.decode(using: .big)
@@ -72,7 +72,7 @@ class ByteCodableTests: XCTestCase {
             p3 = try container.decode(length: 10)
         }
         
-        func encode(to encoder: ByteEncoder) {
+        func encode(to encoder: BinaryEncoder) {
             var container = encoder.container()
             container.encode(p0, using: .little)
             container.encode(p1, using: .big)
@@ -86,10 +86,10 @@ class ByteCodableTests: XCTestCase {
         let case21 = Case2(p0: .min, p1: .pi-1, p2: .pi+1, p3: Data(repeating: 127, count: 10))
         let case10 = Case1(p0: case20, p1: 123, p2: 123, p3: 123, p4: 123, p5: 123, p6: Data(repeating: 133, count: 20), p7: case21)
         do {
-            let encoder = ByteDataEncoder()
+            let encoder = BinaryDataEncoder()
             let data = encoder.encode(case10)
             
-            let deocder = ByteDataDecoder()
+            let deocder = BinaryDataDecoder()
             let case11 = try deocder.decode(Case1.self, from: data)
             assert(case10 == case11)
         } catch let error {

@@ -8,6 +8,6 @@
 
 import Foundation
 
-public typealias BinaryCodable = ByteEncodable&ByteDecodable
+public typealias BinaryCodable = BinaryEncodable&BinaryDecodable
 
 public typealias BinaryCodingUserInfoKey = String

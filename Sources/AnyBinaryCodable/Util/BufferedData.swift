@@ -31,7 +31,7 @@ final public class BufferedData {
     
     public func peek(length: Int) throws -> Data {
         guard length <= bytesAvailable else {
-            throw ByteCodingError.eof
+            throw BinaryCodingError.eof
         }
         let data = storage[position..<position+length]
         return data
@@ -39,7 +39,7 @@ final public class BufferedData {
     
     public func read(length: Int) throws -> Data {
         guard length <= bytesAvailable else {
-            throw ByteCodingError.eof
+            throw BinaryCodingError.eof
         }
         let data = storage.subdata(in: position..<position+length)
         position += length
