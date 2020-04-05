@@ -1,14 +1,14 @@
 //
-//  BaseByteDecodingContainer.swift
-//  AnyByte
+//  BaseBinaryDecodingContainer.swift
+//  AnyBinaryCodable
 //
 //  Created by 刘栋 on 2019/5/9.
-//  Copyright © 2019 anotheren.com. All rights reserved.
+//  Copyright © 2019-2020 anotheren.com. All rights reserved.
 //
 
 import Foundation
 
-public protocol BaseByteDecodingContainer {
+public protocol BaseBinaryDecodingContainer {
     
     mutating func read(length: Int) throws -> Data
     mutating func decode(length: Int) throws -> Data
@@ -25,7 +25,7 @@ public protocol BaseByteDecodingContainer {
     mutating func decode(using endian: Endian) throws -> Double
 }
 
-extension BaseByteDecodingContainer {
+extension BaseBinaryDecodingContainer {
     
     @inlinable
     public mutating func decode(length: Int) throws -> Data {

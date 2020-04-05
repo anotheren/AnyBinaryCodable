@@ -1,14 +1,14 @@
 //
-//  BaseByteEncodingContainer.swift
-//  AnyByte
+//  BaseBinaryEncodingContainer.swift
+//  AnyBinaryCodable
 //
 //  Created by 刘栋 on 2019/5/9.
-//  Copyright © 2019 anotheren.com. All rights reserved.
+//  Copyright © 2019-2020 anotheren.com. All rights reserved.
 //
 
 import Foundation
 
-public protocol BaseByteEncodingContainer {
+public protocol BaseBinaryEncodingContainer {
     
     mutating func write(data: Data)
     mutating func encode<S>(_ sequence: S) where S: Sequence, S.Element == UInt8
@@ -25,7 +25,7 @@ public protocol BaseByteEncodingContainer {
     mutating func encode(_ value: Double, using endian: Endian)
 }
 
-extension BaseByteEncodingContainer {
+extension BaseBinaryEncodingContainer {
     
     @inlinable
     public mutating func encode<S>(_ sequence: S) where S: Sequence, S.Element == UInt8 {

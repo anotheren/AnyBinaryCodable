@@ -1,13 +1,13 @@
 //
 //  UIn24Tests.swift
-//  ByteCodableTests
+//  AnyBinaryCodableTests
 //
 //  Created by 刘栋 on 2018/11/10.
-//  Copyright © 2018 anotheren.com. All rights reserved.
+//  Copyright © 2018-2020 anotheren.com. All rights reserved.
 //
 
 import XCTest
-@testable import AnyByte
+@testable import AnyBinaryCodable
 
 class UIn24Tests: XCTestCase {
     

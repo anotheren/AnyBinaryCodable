@@ -1,6 +1,6 @@
 import XCTest
 
-import AnyByteTests
+import AnyBinaryCodableTests
 
 var tests = [XCTestCaseEntry]()
 tests += ByteCodableTests.allTests()

@@ -1,9 +1,9 @@
 import XCTest
-@testable import AnyByte
+@testable import AnyBinaryCodable
 
 class ByteCodableTests: XCTestCase {
     
-    struct Case1: Equatable, ByteCodable {
+    struct Case1: Equatable, BinaryCodable {
         
         let p0: Case2
         let p1: UInt8
@@ -50,7 +50,7 @@ class ByteCodableTests: XCTestCase {
         }
     }
     
-    struct Case2: Equatable, ByteCodable {
+    struct Case2: Equatable, BinaryCodable {
         
         let p0: UInt16
         let p1: Double
