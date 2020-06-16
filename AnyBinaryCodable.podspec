@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = 'AnyBinaryCodable'
-    s.version = '1.0.0'
+    s.version = '1.0.1'
     s.license = 'MIT'
     s.summary = 'AnyBinaryCodable is a toolbox for encode/decode type to binary'
     s.homepage = 'https://github.com/anotheren/AnyBinaryCodable'
